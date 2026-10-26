@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《青玉案·元夕》範文導讀｜漢華中學中國語文科</title>
+<style>
+
+:root{
+  --blue:#2563eb;--blue-dark:#1d4ed8;--blue-soft:#eff6ff;--blue-mid:#dbeafe;
+  --ink:#1f2937;--muted:#4b5563;--line:#e5e7eb;--card:#fff;--bg:#f4f6fb;
+  --ok:#16a34a;--ok-bg:#dcfce7;--bad:#dc2626;--bad-bg:#fee2e2;--warn:#b45309;--warn-bg:#fef3c7;
+  --radius:14px;--shadow:0 1px 4px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","PingFang HK","Microsoft JhengHei","Noto Sans CJK TC",sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.65}
+a{color:var(--blue)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:100;border-radius:8px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(37,99,235,.06)}
+.topbar-inner{max-width:880px;margin:0 auto;padding:10px 14px 8px}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:6px}
+.brand .school{font-size:.85rem;color:var(--blue);font-weight:700;letter-spacing:.02em}
+.brand h1{margin:0;font-size:1.15rem;font-weight:800}
+.nav{display:flex;flex-wrap:wrap;gap:6px}
+.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid transparent}
+.nav a:hover,.nav a:focus{background:var(--blue);color:#fff;outline:none}
+main{max-width:880px;margin:0 auto;padding:16px 14px 80px}
+.sec{margin:22px 0 28px;scroll-margin-top:110px}
+.sec>h2{margin:0 0 12px;font-size:1.35rem;color:var(--blue-dark);padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec>h3,.card h3{margin:16px 0 8px;font-size:1.08rem}
+.card{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);margin:10px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}}
+.pill{display:inline-block;background:var(--blue-soft);color:var(--blue-dark);border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:700;margin-right:4px}
+.muted{color:var(--muted);font-size:.95rem}
+.person{border-left:4px solid var(--blue);padding-left:12px;margin:10px 0}
+.story{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fafbff}
+.story h4{margin:0 0 8px;color:var(--blue-dark)}
+.story dl{margin:0;display:grid;grid-template-columns:4.5em 1fr;gap:4px 8px}
+.story dt{font-weight:700;color:var(--muted)}.story dd{margin:0}
+.story .baihua{margin:10px 0 0;padding:10px 12px;background:#f0fdf4;border-left:4px solid #16a34a;border-radius:0 10px 10px 0;font-size:.95rem;line-height:1.65;color:#14532d}
+.story .baihua strong{color:#166534}
+.vocab{display:grid;gap:8px}
+.vocab-item{display:grid;grid-template-columns:minmax(7em,auto) 1fr;gap:8px 12px;padding:10px 12px;background:#fafbff;border-radius:10px;border:1px solid var(--line)}
+.vocab-item b{color:var(--blue-dark)}
+@media(max-width:560px){.vocab-item{grid-template-columns:1fr}}
+.struct ul{margin:6px 0;padding-left:1.2em}.struct li{margin:4px 0}
+.student-form{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px}
+@media(max-width:640px){.student-form{grid-template-columns:1fr}}
+label.field{display:block;font-weight:700;font-size:.92rem;margin-bottom:4px}
+input.field,select.field{width:100%;min-height:48px;padding:10px 12px;font:inherit;border:2px solid #d1d5db;border-radius:10px;background:#fff}
+input.field:focus,select.field:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tabs button{flex:1;min-width:120px;min-height:48px;font:inherit;font-weight:700;border:2px solid var(--blue);border-radius:12px;background:#fff;color:var(--blue);cursor:pointer}
+.tabs button.active,.tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
+.prog-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.95rem;color:var(--muted);margin:8px 0 4px}
+.bar{height:10px;background:#e5e7eb;border-radius:6px;overflow:hidden}
+.bar>div{height:100%;background:var(--blue);width:0;transition:width .3s}
+.overall{background:var(--blue-soft);border:1px solid var(--blue-mid);border-radius:12px;padding:12px 14px;margin:12px 0}
+.opt{display:flex;align-items:flex-start;gap:10px;min-height:56px;padding:12px;margin:8px 0;border:2px solid #d1d5db;border-radius:12px;background:#fff;cursor:pointer;text-align:left}
+.opt input{width:22px;height:22px;margin-top:3px;flex:none}
+.opt.sel{border-color:var(--blue);background:var(--blue-soft)}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)}
+.stem{font-size:1.08rem;font-weight:700;margin:0 0 10px}
+.fb{margin-top:12px;padding:12px;border-radius:10px}
+.fb.ok{background:var(--ok-bg)}.fb.bad{background:var(--bad-bg)}
+.btn{font:inherit;font-weight:700;min-height:52px;width:100%;margin-top:12px;border:0;border-radius:12px;background:var(--blue);color:#fff;cursor:pointer}
+.btn:disabled{background:#9ca3af;cursor:not-allowed}
+.btn.sec{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn.ok{background:var(--ok)}
+.btn.warn{background:#d97706}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.btn-row{grid-template-columns:1fr}}
+.big{font-size:1.8rem;font-weight:800;text-align:center;margin:8px 0}
+.rv{border-top:1px solid var(--line);padding:10px 0}.rv .t{font-weight:700}.c{color:#15803d}.w{color:#b91c1c}
+.note{background:var(--warn-bg);border-left:4px solid var(--warn);padding:10px 12px;border-radius:0 10px 10px 0;margin:10px 0;font-size:.95rem}
+.video-box{aspect-ratio:16/9;background:linear-gradient(135deg,#dbeafe,#eff6ff);border:2px dashed #93c5fd;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:20px;text-align:center;color:var(--muted)}
+.video-box iframe{width:100%;height:100%;border:0;border-radius:12px}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;background:#000}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}
+.footer{max-width:880px;margin:0 auto;padding:8px 14px 28px;color:var(--muted);font-size:.88rem;text-align:center}
+[hidden]{display:none!important}
+@media print{
+  .topbar{position:static;box-shadow:none}
+  .nav,.btn,#quizPanel .btn,.student-form,input,select,.tabs{display:none!important}
+  body{background:#fff;font-size:14px}
+  .card,.story,.vocab-item{box-shadow:none;border:1px solid #ccc}
+  .sec{break-inside:avoid}
+}
+.classic{font-size:1.05rem;line-height:2;letter-spacing:.02em}
+.classic p{margin:0 0 1em}
+.classic h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.classic .attr{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--muted);line-height:1.55}
+.classic .poem-line{font-size:1.15rem;font-weight:600;letter-spacing:.06em;text-align:center;margin:0.35em 0}
+.classic .poem-title{text-align:center;font-size:1.25rem;font-weight:800;margin:0 0 4px;color:var(--blue-dark)}
+.classic .poem-author{text-align:center;margin:0 0 16px;color:var(--muted);font-size:.95rem}
+.yuyi{line-height:1.85}
+.yuyi p{margin:0 0 .95em}
+.yuyi h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.sec-head-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec-head-row h2{margin:0;padding:0;border:0;font-size:1.35rem;color:var(--blue-dark)}
+.btn-toggle{font:inherit;font-weight:700;font-size:.88rem;min-height:40px;padding:6px 14px;border-radius:999px;border:2px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;width:auto;margin:0}
+.btn-toggle:hover,.btn-toggle:focus{background:var(--blue);color:#fff;outline:none}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="school">漢華中學中國語文科</span>
+      <h1>《青玉案·元夕》範文導讀</h1>
+    </div>
+    <nav class="nav" aria-label="章節導航">
+      <a href="#daodu">導讀</a>
+      <a href="#quanwen">全文</a>
+      <a href="#yuyi">語譯</a>
+      <a href="#zici">重點字詞</a>
+      <a href="#zhangfa">章法／寫作手法</a>
+      <a href="#zice">自測</a>
+      <a href="#shipin">影片</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ========== 1 導讀 ========== -->
+<section class="sec" id="daodu">
+  <h2>一、導讀</h2>
+  <p class="muted">對象：中四至中六　｜　篇章：《青玉案·元夕》　｜　作者：辛棄疾（宋）　｜　用途：學生自學＋課堂投影</p>
+
+  <div class="card">
+    <h3>背景</h3>
+    <p>這闋詞寫<strong>南宋</strong>時期<strong>臨安</strong>（今杭州）一帶的<strong>元宵燈市</strong>。其時朝中<strong>主戰</strong>與<strong>主和</strong>兩派對峙：主戰派力主抗金北伐、恢復中原；主和派得勢，主戰者多被閒置、排擠。辛棄疾力主恢復，卻長期<strong>壯志難酬</strong>。全詞先極寫元宵璀璨熱鬧，再寫人群中千百度尋覓，終在<strong>燈火闌珊</strong>處發現「那人」——盛景與孤清並置，寄託深遠。</p>
+  </div>
+
+  <div class="card">
+    <h3>作者簡介</h3>
+    <div class="person"><span class="pill">作者</span><strong>辛棄疾</strong>（公元 1140–1207），字<strong>幼安</strong>，號<strong>稼軒</strong>，歷城（今山東省濟南市）人。南宋著名愛國詞人，詞風以<strong>豪放</strong>見稱，與蘇軾並稱「蘇辛」。本詞藉元夕燈市寫尋覓與發現，亦常見孤高自守、理想難伸的讀法。</div>
+  </div>
+
+  <div class="card">
+    <h3>記住三個關鍵</h3>
+    <div class="grid3" style="margin-top:10px">
+      <article class="story">
+        <h4>① 元宵盛景</h4>
+        <dl>
+          <dt>上片</dt><dd>花千樹、星如雨、寶馬雕車、魚龍舞。</dd>
+          <dt>作用</dt><dd>極寫熱鬧，為下片反襯鋪路。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>先記住畫面——春風夜裡花燈如千樹開花，煙花如星雨；寶馬雕車、簫聲、月光、魚龍彩燈一整夜。越熱鬧，後面「闌珊處」就越突出。</p>
+      </article>
+      <article class="story">
+        <h4>② 眾裏尋他</h4>
+        <dl>
+          <dt>下片</dt><dd>蛾兒雪柳、笑語暗香；千百度尋覓。</dd>
+          <dt>情調</dt><dd>由賞玩轉入焦灼執著。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>盛裝女子笑語而過，都是「眾」；詞人卻在人群裡<strong>千百度</strong>找「他／她」。找得越久，後面忽然發現就越有力量。</p>
+      </article>
+      <article class="story">
+        <h4>③ 燈火闌珊</h4>
+        <dl>
+          <dt>收束</dt><dd>驀然迴首；那人在燈火稀疏處。</dd>
+          <dt>寄託</dt><dd>解讀多元：自甘寂寞／理想／感情等。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>忽然一回頭——要找的人，不在最熱鬧的地方，而在燈火<strong>稀落</strong>的角落。結合主戰主和，常見詞人<strong>不肯隨波逐流</strong>的自況；亦有理想追求、感情追求等讀法，不宜只執一說。</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>溫習口訣</h3>
+    <p>東風夜放花千樹，星如雨落煙花舞；寶馬雕車香滿路，鳳簫玉壺魚龍赴；蛾兒雪柳黃金縷，笑語暗香眾裏去；尋他千百度未遇，驀然迴首闌珊處；盛鬧反襯那人孤，主戰自況志向固。</p>
+  </div>
+</section>
+
+<!-- ========== 2 全文 ========== -->
+<section class="sec" id="quanwen">
+  <h2>二、全文</h2>
+  <p class="muted">辛棄疾《青玉案·元夕》　｜　文本依教育局「指定文言經典學習材料」參考版本</p>
+  <div class="card classic">
+    <div class="poem-title">青玉案　元夕</div>
+    <div class="poem-author">辛棄疾</div>
+    <h3>上片</h3>
+    <p class="poem-line">東風夜放花千樹，更吹落、星如雨。</p>
+    <p class="poem-line">寶馬雕車香滿路。</p>
+    <p class="poem-line">鳳簫聲動，玉壺光轉，一夜魚龍舞。</p>
+    <h3>下片</h3>
+    <p class="poem-line">蛾兒雪柳黃金縷，笑語盈盈暗香去。</p>
+    <p class="poem-line">眾裏尋他千百度；驀然迴首，那人卻在、燈火闌珊處。</p>
+    <p class="attr">出處：辛棄疾《青玉案·元夕》；文本依教育局「指定文言經典學習材料」參考版本（ks4_17c_text.pdf）。註：以上僅就坊間所見資料，提供一個參考版本；教師亦可參考、使用其他版本。</p>
+  </div>
+</section>
+
+<!-- ========== 3 語譯 ========== -->
+<section class="sec" id="yuyi">
+  <div class="sec-head-row">
+    <h2>三、語譯</h2>
+    <button type="button" class="btn-toggle" id="yuyiToggle" aria-controls="yuyiBody" aria-expanded="true">隱藏語譯</button>
+  </div>
+  <div id="yuyiBody">
+  <p class="note">以下語譯供自學參考，考試請以課文原文為準。</p>
+  <div class="card yuyi">
+    <h3>上片</h3>
+    <p>春風在元宵夜裡催開了如千樹繁花般的燈火，又吹落滿天煙花，像繁星如雨灑下。名貴的駿馬、雕飾華麗的車子走過，一路充滿衣鬢的香氣。鳳簫聲響起，明月的光輝流轉（亦有解作玉燈轉動），魚龍形的彩燈（或百戲）整夜飛舞。</p>
+    <h3>下片</h3>
+    <p>頭戴蛾兒、雪柳、黃金縷等飾物的女子，笑語盈盈，帶着淡淡的香氣遠去。我在人群裡千百次尋找那個人；忽然回頭一望，那人卻在燈火稀疏、將盡的地方。</p>
+  </div>
+  </div>
+</section>
+
+<!-- ========== 4 重點字詞 ========== -->
+<section class="sec" id="zici">
+  <h2>四、重點字詞</h2>
+  <p class="muted">以下重點詞語宜連同課文語境記誦。（注釋參考教育局材料及通行箋注）</p>
+  <div class="card vocab">
+    <div class="vocab-item"><b>青玉案</b><span>詞牌名。本詞以《元夕》為題。</span></div>
+    <div class="vocab-item"><b>元夕</b><span>元宵之夜，即農曆正月十五夜。</span></div>
+    <div class="vocab-item"><b>東風</b><span>春風。「東風夜放花千樹」——春風在夜裡催開（燈火如）花千樹。</span></div>
+    <div class="vocab-item"><b>花千樹</b><span>喻花燈極多，如千樹繁花盛開。並非寫真花樹。</span></div>
+    <div class="vocab-item"><b>星如雨</b><span>喻煙花（或燈火）如繁星灑落、如雨而下。</span></div>
+    <div class="vocab-item"><b>寶馬雕車</b><span>名貴的駿馬與雕飾華麗的車子。寫觀燈車馬之盛。「香滿路」寫車中人衣鬢之香。</span></div>
+    <div class="vocab-item"><b>鳳簫</b><span>排簫，或簫的美稱。「鳳簫聲動」——簫聲響起。</span></div>
+    <div class="vocab-item"><b>玉壺</b><span>常喻明月；亦有指玉燈或漏壺之說。「玉壺光轉」——月光流轉／燈光轉動。</span></div>
+    <div class="vocab-item"><b>魚龍舞</b><span>魚形、龍形的彩燈舞動，或指百戲表演。通宵不息。</span></div>
+    <div class="vocab-item"><b>蛾兒雪柳黃金縷</b><span>皆為女子元宵所戴頭飾。寫盛裝觀燈的女子。</span></div>
+    <div class="vocab-item"><b>盈盈</b><span>儀態美好、輕盈。「笑語盈盈」——笑語輕盈可親。</span></div>
+    <div class="vocab-item"><b>暗香</b><span>淡淡的香氣。指衣鬢之香隨人遠去。</span></div>
+    <div class="vocab-item"><b>千百度</b><span>千百次。「度」＝次、回。強調尋覓之久、之切。</span></div>
+    <div class="vocab-item"><b>驀然</b><span>忽然、突然。「驀然迴首」——忽然回頭望。</span></div>
+    <div class="vocab-item"><b>迴首</b><span>回頭看。教育局文本作「迴首」（勿寫作「回首」）。</span></div>
+    <div class="vocab-item"><b>闌珊</b><span>零落、稀疏、將盡。「燈火闌珊處」——燈火暗淡稀疏之處。</span></div>
+  </div>
+</section>
+
+<!-- ========== 5 章法／寫作手法 ========== -->
+<section class="sec" id="zhangfa">
+  <h2>五、章法／寫作手法</h2>
+  <div class="card struct">
+    <h3>1. 詞體・上下片：由景到人</h3>
+    <p>《青玉案》為<strong>詞牌</strong>，《元夕》為題。全詞分<strong>上片</strong>與<strong>下片</strong>。上片極寫元宵燈市之景（花燈、煙花、車馬、簫聲、魚龍）；下片由盛裝女子（「眾」）轉入「尋他」，再以「驀然迴首」收於燈火闌珊處的「那人」。章法分明：<strong>景 → 人／眾 → 尋 → 見</strong>。</p>
+    <h3>2. 主要寫作手法</h3>
+    <ul>
+      <li><strong>反襯／對比</strong>：上片盛鬧與蛾兒笑語極寫繁華，反襯「燈火闌珊處」的孤清，令「那人」更加突出。</li>
+      <li><strong>多感官描寫</strong>：花千樹、星如雨、玉壺光轉（視覺）；香滿路、暗香（嗅覺）；鳳簫聲動、笑語盈盈（聽覺）——渲染元夕盛況。</li>
+      <li><strong>比喻</strong>：「花千樹」喻花燈；「星如雨」喻煙花／燈火。</li>
+      <li><strong>卒章顯志</strong>：前面鋪足「眾」與「鬧」，結尾才點出「那人卻在、燈火闌珊處」，主旨與人物在收束處顯現。</li>
+      <li><strong>象徵寄託</strong>：「那人」可讀為自甘寂寞、不隨流俗；亦可讀為理想境界或感情追求之對象——<strong>宜多元理解，勿只寫單一解讀為唯一答案</strong>。</li>
+    </ul>
+    <h3>3. 情志</h3>
+    <p>表面寫元宵尋人與忽然發現的驚喜；結合南宋主戰／主和之局，亦可見詞人<strong>不肯隨眾附和</strong>、寧願<strong>自甘寂寞</strong>、堅守恢復理想的情志。豪放詞人筆下，熱鬧與孤清並置，寄託深厚。</p>
+    <h3>4. 結構示意</h3>
+    <p>上片：東風花千樹・星如雨 → 寶馬雕車 → 鳳簫・玉壺・魚龍舞（極寫盛景） → 下片：蛾兒雪柳・笑語暗香（寫眾） → 眾裏尋他千百度（尋） → 驀然迴首・燈火闌珊（見・顯志）。</p>
+  </div>
+</section>
+
+<!-- ========== 6 自測 ========== -->
+<section class="sec" id="zice">
+  <h2>六、自測</h2>
+  <p class="muted">題目為校本自測（內容理解／字詞解釋／寫作手法各 15 題，合共 45 題）。可先作答；交卷前請填學生資料。</p>
+
+  <div class="card" id="studentCard">
+    <h3>學生資料（交卷必填）</h3>
+    <div class="student-form">
+      <div>
+        <label class="field" for="cls">班別</label>
+        <input class="field" id="cls" name="cls" placeholder="例：4A" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sid">學號</label>
+        <input class="field" id="sid" name="sid" placeholder="例：01" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sname">姓名</label>
+        <input class="field" id="sname" name="sname" placeholder="請輸入姓名" maxlength="20" autocomplete="name" required>
+      </div>
+    </div>
+    <p class="muted" style="margin:8px 0 0">班別可用如 4A、5C、6D；學號請填兩位數字（如 01）。</p>
+  </div>
+
+  <div class="overall" id="overallBox">
+    <div class="prog-row"><strong>整體進度</strong><span id="overallText">0 / 45 題　總分 0</span></div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="45" aria-valuenow="0" id="overallBar"><div id="overallFill"></div></div>
+    <div class="prog-row" style="margin-top:8px;font-size:.9rem">
+      <span>內容理解：<b id="scContent">0</b>/15</span>
+      <span>字詞解釋：<b id="scVocab">0</b>/15</span>
+      <span>寫作手法：<b id="scRhet">0</b>/15</span>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="練習部分">
+    <button type="button" role="tab" id="tab-content" aria-selected="true" aria-controls="panel-quiz" data-sec="content">內容理解（15）</button>
+    <button type="button" role="tab" id="tab-vocab" aria-selected="false" aria-controls="panel-quiz" data-sec="vocab">字詞解釋（15）</button>
+    <button type="button" role="tab" id="tab-rhet" aria-selected="false" aria-controls="panel-quiz" data-sec="rhetorical">寫作手法（15）</button>
+  </div>
+
+  <div class="card" id="panel-quiz" role="tabpanel">
+    <div class="prog-row"><span id="secProgText">第 1 / 15 題</span><span id="secScoreText">本節答對：0</span></div>
+    <div class="bar" id="secBar" role="progressbar" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0"><div id="secFill"></div></div>
+    <form id="qform" onsubmit="return false" style="margin-top:12px">
+      <fieldset style="border:0;margin:0;padding:0">
+        <legend class="stem" id="stem"></legend>
+        <div id="opts"></div>
+      </fieldset>
+      <div id="fb" class="fb" hidden></div>
+      <button type="button" class="btn" id="checkBtn" disabled>檢查答案</button>
+      <div class="btn-row">
+        <button type="button" class="btn sec" id="nextBtn" hidden>下一題</button>
+        <button type="button" class="btn ok" id="secDoneBtn" hidden>完成本節</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card" id="secResult" hidden>
+    <h3 id="secResultTitle">本節完成</h3>
+    <p class="big" id="secFinal"></p>
+    <p id="secFinalMsg" class="muted" style="text-align:center"></p>
+    <div class="btn-row">
+      <button type="button" class="btn sec" id="retrySecBtn">重做本節</button>
+      <button type="button" class="btn" id="goNextSecBtn">下一節</button>
+    </div>
+    <button type="button" class="btn warn" id="submitEarlyBtn" style="margin-top:10px" hidden>交卷（已完成全部）</button>
+    <h3>答題回顧</h3>
+    <div id="secReview"></div>
+  </div>
+
+  <div class="card" id="finalResult" hidden>
+    <h3>全部完成・交卷</h3>
+    <p class="big" id="finalScore"></p>
+    <p id="finalDetail" style="text-align:center"></p>
+    <p id="submitMsg" class="note" hidden></p>
+    <div class="btn-row">
+      <button type="button" class="btn ok" id="submitBtn">交卷至老師試算表</button>
+      <button type="button" class="btn sec" id="retryAllBtn">全部重做</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7 影片 ========== -->
+<section class="sec" id="shipin">
+  <h2>七、影片｜寶寶老師陪你快速溫範文</h2>
+  <div class="card">
+    <p><a id="videoTitleLink" href="#" target="_blank" rel="noopener">寶寶老師陪你快速溫範文｜《青玉案·元夕》</a></p>
+    <div id="videoArea"></div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">漢華中學中國語文科　｜　《青玉案·元夕》範文導讀　｜　供課堂投影及學生自學</footer>
+
+<script>
+(function () {
+"use strict";
+
+/* ===== 設定：預覽階段 GAS 留空；影片 ID 已填 ===== */
+const GAS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzg8mRoMjNe16wtZ5P7qpgdWlmgcWyUo7hpiqwF2HpBaSDHlfeOhd2Wd3GcPnPQCLbiXg/exec";
+const YOUTUBE_ID = "6x13vpbdu2s";
+
+/* ===== 題庫：校本自測；o[0] 為正確答案 ===== */
+var Q_CONTENT = [{"s":"《青玉案·元夕》的作者是：","o":["辛棄疾","蘇軾","李清照","陸游"],"e":"教育局指定篇章：辛棄疾《青玉案·元夕》。"},{"s":"辛棄疾的字與號分別是：","o":["字幼安、號稼軒","字子瞻、號東坡","字易安、號易安居士","字務觀、號放翁"],"e":"辛棄疾字幼安，號稼軒；歷城人，公元1140–1207。"},{"s":"「元夕」指的是：","o":["農曆正月十五元宵之夜","中秋月夜","七夕","除夕"],"e":"元夕＝元宵，農曆正月十五夜。"},{"s":"本詞寫作背景較接近：","o":["南宋臨安一帶的元宵燈市；朝中主戰與主和對峙，詞人壯志難酬","北宋汴京新婚燕爾","元朝統一後的隱居","金兵入汴前的太平歲月"],"e":"詞寫南宋元夕盛景；結合主戰／主和之局，可見詞人理想難伸。"},{"s":"《青玉案》上片主要描寫：","o":["元宵夜燈火輝煌、車馬喧鬧的盛況","元宵夜冷清的街道","詞人在家獨坐","戰爭場面，描寫將士殺敵"],"e":"上片極寫元宵燈市熱鬧繁華。"},{"s":"「東風夜放花千樹」中「花千樹」主要喻指：","o":["花燈盛多，如千樹繁花盛開","真的千樹鮮花","雪花","庭園花木"],"e":"視頻／校本重點：花千樹喻花燈，不是真花樹。"},{"s":"「更吹落、星如雨」較常解作：","o":["煙花（或燈火）如繁星被吹落、如雨灑下","真的流星雨預報","天亮了星星消失","大雨傾盆"],"e":"「星如雨」寫煙花／燈火之盛；與「花千樹」同寫視覺璀璨。"},{"s":"「蛾兒雪柳黃金縷，笑語盈盈暗香去」描寫的是：","o":["盛裝打扮、笑語而過的觀燈女子","雪中折柳、送別遠行的人","飛蛾撲火","金色的柳條"],"e":"蛾兒、雪柳、黃金縷為元宵女子頭飾；寫「眾」之美。"},{"s":"「眾裏尋他千百度」表現詞人：","o":["在人群中苦苦尋覓那人","在人群中迷路","在人群中數人數","不想找人"],"e":"千百度＝千百次，強調尋覓之久、之切。"},{"s":"「驀然迴首，那人卻在、燈火闌珊處」的情節轉折是：","o":["尋覓許久後忽然回頭，發現那人在燈火稀疏之處","一開始就找到那人","那人消失在熱鬧處","詞人放棄尋找"],"e":"教育局文本作「迴首」；驀然＝忽然；闌珊＝燈火零落稀疏。"},{"s":"《青玉案》上片極寫元宵燈市繁華，章法上的作用是：","o":["以熱鬧反襯下片「那人」所在的燈火闌珊","純粹記錄民俗而無文學作用","表達對節日的厭惡","說明作者只喜歡看燈"],"e":"盛鬧為反襯鋪路，突出闌珊處的那人。"},{"s":"關於「那人」的解讀，下列哪一項最恰當？","o":["可有多元解讀：如自甘寂寞、理想追求、感情追求等，不宜只執一種為唯一答案","只能是愛情對象，沒有其他可能","只能是仇人","那人＝燈火本身，無人物寄託"],"e":"校本／視頻重點：那人解讀多元；考試勿只寫單一解讀為唯一答案。"},{"s":"結合南宋主戰／主和背景，「那人」在燈火闌珊處常被讀作：","o":["詞人不肯隨眾附和、寧願自甘寂寞、堅守理想的自況","詞人完全支持主和、喜歡熱鬧","詞人已放棄恢復中原","與時代背景無關的純寫景"],"e":"主戰派受排擠；闌珊處不入熱鬧場——常見「自況」讀法之一。"},{"s":"本詞在詞史上辛棄疾常被歸入哪一路？","o":["豪放派","婉約派（僅此一路）","玄言詩","宮體"],"e":"辛棄疾為南宋豪放詞重要代表；本詞亦見其風格與寄託。"},{"s":"本詞主旨最接近：","o":["以元宵盛景反襯燈火闌珊處之「那人」；表面寫尋覓與發現，亦可見孤高自守／理想追求等寄託","純粹記錄燈市物價","勸人早睡","描寫邊塞戰爭地圖"],"e":"盛景→尋覓→闌珊處發現；反襯與寄託是閱讀關鍵。"}];
+var Q_VOCAB = [{"s":"「青玉案」是：","o":["詞牌名（《元夕》為題）","詩題本身無詞牌","地名","樂器名"],"e":"青玉案為詞牌；元夕為題。"},{"s":"「元夕」的意思是：","o":["元宵之夜（農曆正月十五夜）","元旦早上","中秋","冬至夜"],"e":"夕＝夜；元夕＝元宵夜。"},{"s":"「東風」在「東風夜放花千樹」中指：","o":["春風","東面吹來的颱風警報","空調冷風","戰爭東風"],"e":"東風即春風；夜放——元宵夜起。"},{"s":"「東風夜放花千樹」中「花」字主要指：","o":["燈火（花燈）","真的花朵","雪花","紙花祭品"],"e":"元宵燈火如千樹繁花；校本常考。"},{"s":"「星如雨」較指：","o":["煙花／燈火如繁星灑落","天文流星雨報告","眼淚","珍珠雨"],"e":"比喻煙花或燈火之盛。"},{"s":"「寶馬雕車」的意思是：","o":["名貴駿馬與雕飾華麗的車","普通板車","戰車鐵騎","玩具車"],"e":"寫觀燈車馬之豪華；香滿路寫衣鬢之香。"},{"s":"「鳳簫」指：","o":["排簫（或簫之美稱）","鳳凰本身","鼓","琵琶"],"e":"鳳簫聲動——簫聲響起。"},{"s":"「玉壺」在本詞中較常解作：","o":["明月（亦有指玉燈或漏壺之說）","玉製茶壺煮水","夜壺","玉印章"],"e":"「玉壺光轉」多解月光流轉；通行箋注亦有玉燈／漏壺說。"},{"s":"「一夜魚龍舞」中「魚龍」指：","o":["魚形、龍形的彩燈（或百戲）","真的魚和龍","魚市和龍舟比賽獎牌","水族館"],"e":"彩燈／百戲通宵飛舞。"},{"s":"「蛾兒雪柳黃金縷」指：","o":["女子元宵所戴的頭飾","昆蟲與柳樹","黃金首飾店招牌","髮型教程名稱"],"e":"蛾兒、雪柳、黃金縷皆元宵女子飾物。"},{"s":"「盈盈」在「笑語盈盈」中較指：","o":["儀態美好、笑語輕盈","裝滿容器","盈利賺錢","盈虧報表"],"e":"寫觀燈女子儀態與笑語。"},{"s":"「眾裏尋他千百度」中「度」字的意思是：","o":["次、回","溫度","度過假期","學術程度"],"e":"千百度＝千百次。"},{"s":"「驀然」的意思是：","o":["忽然、突然","緩慢地","故意地","從來沒有"],"e":"驀然迴首——忽然回頭。"},{"s":"教育局文本「驀然迴首」的「迴」字寫作：","o":["迴（迴首）","回（回首，本篇教育局不作此形）","廻（異體，本篇教育局不作此形）","逥"],"e":"須跟教育局文本：迴首。"},{"s":"「燈火闌珊處」中「闌珊」的意思是：","o":["零落、稀疏、將盡","燈火輝煌到極點","欄杆、圍欄","珊瑚裝飾"],"e":"闌珊＝暗淡零落；與上片盛鬧相對。"}];
+var Q_RHET = [{"s":"《青玉案》是：","o":["詞牌名（《元夕》為題）","律詩詩題","八股文體","曲藝名稱"],"e":"詞分上下片；青玉案為詞牌。"},{"s":"本詞的篇章結構主要分為：","o":["上片與下片","首頷頸尾四聯","三幕劇","起承轉合論說文四段定死"],"e":"上片寫景盛鬧；下片由眾→尋→見。"},{"s":"「東風夜放花千樹，更吹落、星如雨」主要運用了：","o":["比喻","擬人為主","對偶為唯一手法","反問"],"e":"以花千樹、星如雨喻燈火煙花。"},{"s":"「寶馬雕車香滿路。鳳簫聲動，玉壺光轉」從哪些感官描寫元宵盛況？","o":["視覺、嗅覺、聽覺","只有觸覺與味覺","只有聽覺","只有味覺"],"e":"車香（嗅）、簫聲（聽）、光轉與車馬（視）——多感官渲染。"},{"s":"《青玉案》上片的繁華熱鬧與「那人」所在的燈火闌珊處構成：","o":["反襯／對比","正襯（以鬧襯鬧）","比喻為唯一","擬人為唯一"],"e":"盛鬧反襯闌珊；鬧中見靜，突出那人。"},{"s":"「驀然迴首」在結構上的作用是：","o":["情節陡轉，引出那人所在","總結全詞無新意","只交代時間","只描寫燈火亮度"],"e":"於千百度尋覓中忽然一轉，卒見那人。"},{"s":"「眾裏尋他千百度；驀然迴首，那人卻在、燈火闌珊處」在章法上屬：","o":["卒章顯志（前面鋪「眾」「鬧」，結尾才點出那人）","開篇點題後不再推進","中間插入無關議論","重複抄上片原句"],"e":"主旨與人物在結尾顯現——卒章顯志。"},{"s":"《青玉案》以「那人」寄寓詞人情志，較屬：","o":["象徵寄託（解讀宜多元，勿執一說）","純記流水帳無寄託","借古諷今為唯一定論","寓言動物故事"],"e":"常見自況／理想／感情等讀法；象徵寄託，答案宜開放。"},{"s":"「笑語盈盈暗香去」主要運用了：","o":["聽覺與嗅覺描寫","只有觸覺","只有味覺","只有心理獨白"],"e":"笑語可聞，暗香可嗅。"},{"s":"上片與下片的寫作重心較接近：","o":["上片極寫元宵盛景；下片由盛裝女子轉入尋覓與發現","上片寫喜下片寫邊塞戰爭","上下片內容完全重複","下片改寫田園農事"],"e":"景→人／眾→尋→見，層層推進。"},{"s":"「一夜魚龍舞」對上片氣氛的作用是：","o":["以彩燈／百戲通宵，把熱鬧推到極致，為下片反襯蓄勢","寫白天休息","取消前面的熱鬧","轉入淒清秋景"],"e":"魚龍舞收束上片盛況。"},{"s":"以景襯情在本詞中的體現是：","o":["燈火、車馬、簫聲、煙花既寫元夕之美，亦襯尋覓之執著與發現之驚喜／孤清","全篇無景物","景與情完全無關","只用議論無景物"],"e":"盛景襯情；闌珊處亦以景見人。"},{"s":"情感推進較接近下列哪一條？","o":["賞玩盛景 → 見眾美而尋他 → 焦灼千百度 → 驀然發現（驚喜／孤清）","從頭到尾同一平面無推進","先發現再尋覓","只有憤怒無其他"],"e":"視頻／校本：情感層層推進。"},{"s":"下列哪一項不是本詞常見的寫作手法重點？","o":["七組疊字層進（那是《聲聲慢》的特色）","反襯／對比","多感官描寫","卒章顯志"],"e":"疊字層進屬李清照《聲聲慢》；本詞重點是反襯、多感官、卒章顯志等。"},{"s":"本詞藝術手法組合最貼切的是：","o":["上下片景→人＋反襯盛鬧／闌珊＋多感官＋卒章顯志＋那人多元寄託","只有三段論邏輯","純書信體","戲劇分場對白體"],"e":"校本重點與此一致。"}];
+
+var SECTIONS = {
+  content: { key: 'content', title: '內容理解', Q: Q_CONTENT },
+  vocab: { key: 'vocab', title: '字詞解釋', Q: Q_VOCAB },
+  rhetorical: { key: 'rhetorical', title: '寫作手法', Q: Q_RHET }
+};
+var SEC_ORDER = ['content', 'vocab', 'rhetorical'];
+var MAX_TOTAL = 45;
+var DRAFT_KEY = 'qingyuan_daodu_draft';
+
+function shuffle(a) {
+  a = a.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+function $(id) { return document.getElementById(id); }
+
+var state = {};
+SEC_ORDER.forEach(function (k) {
+  state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+});
+var currentSec = 'content';
+
+function studentInfo() {
+  return {
+    class: ($('cls').value || '').trim().toUpperCase(),
+    studentId: ($('sid').value || '').trim(),
+    name: ($('sname').value || '').trim()
+  };
+}
+function requireStudent() {
+  var s = studentInfo();
+  if (!s.class || !s.studentId || !s.name) {
+    alert('請先填寫班別、學號、姓名，再開始或交卷。');
+    $('studentCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    $('cls').focus();
+    return null;
+  }
+  return s;
+}
+
+function prepareOrder(secKey) {
+  var Q = SECTIONS[secKey].Q;
+  return Q.map(function (q) {
+    return { s: q.s, e: q.e, ans: q.o[0], o: shuffle(q.o) };
+  });
+}
+
+function startSection(secKey, force) {
+  currentSec = secKey;
+  var st = state[secKey];
+  if (force || !st.order) {
+    st.order = prepareOrder(secKey);
+    st.cur = 0;
+    st.answers = [];
+    st.finished = false;
+    st.score = 0;
+  }
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    var on = b.getAttribute('data-sec') === secKey;
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+    b.classList.toggle('active', on);
+  });
+  $('finalResult').hidden = true;
+  if (st.finished) {
+    $('panel-quiz').hidden = true;
+    showSecResult(secKey);
+  } else {
+    $('secResult').hidden = true;
+    $('panel-quiz').hidden = false;
+    showQuestion();
+  }
+  updateOverall();
+}
+
+function setSecScore(secKey) {
+  var st = state[secKey];
+  var s = 0;
+  for (var i = 0; i < st.answers.length; i++) {
+    if (st.answers[i] && st.answers[i].ok) s++;
+  }
+  st.score = s;
+  return s;
+}
+
+function updateOverall() {
+  var done = 0, totalScore = 0;
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var answered = st.answers.filter(function (a) { return a; }).length;
+    done += answered;
+    totalScore += setSecScore(k);
+  });
+  $('overallFill').style.width = (done / MAX_TOTAL * 100) + '%';
+  $('overallBar').setAttribute('aria-valuenow', String(done));
+  $('overallText').textContent = done + ' / ' + MAX_TOTAL + ' 題　總分 ' + totalScore;
+  $('scContent').textContent = state.content.score;
+  $('scVocab').textContent = state.vocab.score;
+  $('scRhet').textContent = state.rhetorical.score;
+
+  var allDone = SEC_ORDER.every(function (k) { return state[k].finished; });
+  if (allDone) {
+    $('submitEarlyBtn').hidden = false;
+    showFinal();
+  }
+}
+
+function showQuestion() {
+  var st = state[currentSec];
+  var q = st.order[st.cur];
+  var N = st.order.length;
+  st._picked = null;
+  st._checked = false;
+  $('stem').textContent = (st.cur + 1) + '. ' + q.s;
+  var box = $('opts');
+  box.innerHTML = '';
+  q.o.forEach(function (t, i) {
+    var l = document.createElement('label');
+    l.className = 'opt';
+    var r = document.createElement('input');
+    r.type = 'radio'; r.name = 'opt'; r.value = String(i);
+    var sp = document.createElement('span');
+    sp.textContent = String.fromCharCode(65 + i) + '. ' + t;
+    l.appendChild(r); l.appendChild(sp);
+    r.addEventListener('change', function () {
+      if (st._checked) return;
+      st._picked = i;
+      Array.prototype.forEach.call(box.children, function (c) { c.classList.remove('sel'); });
+      l.classList.add('sel');
+      $('checkBtn').disabled = false;
+    });
+    box.appendChild(l);
+  });
+  $('fb').hidden = true;
+  $('checkBtn').hidden = false;
+  $('checkBtn').disabled = true;
+  $('nextBtn').hidden = true;
+  $('secDoneBtn').hidden = true;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('secBar').setAttribute('aria-valuenow', String(answered));
+  $('secProgText').textContent = '第 ' + (st.cur + 1) + ' / ' + N + ' 題';
+  $('secScoreText').textContent = '本節答對：' + st.score;
+}
+
+function checkAnswer() {
+  var st = state[currentSec];
+  if (st._checked || st._picked === null) return;
+  st._checked = true;
+  $('checkBtn').disabled = true;
+  var q = st.order[st.cur];
+  var ok = q.o[st._picked] === q.ans;
+  st.answers[st.cur] = { ok: ok, pick: q.o[st._picked], ans: q.ans, idx: st.cur };
+  var labs = $('opts').children;
+  for (var i = 0; i < labs.length; i++) {
+    labs[i].querySelector('input').disabled = true;
+    if (q.o[i] === q.ans) labs[i].classList.add('ok');
+    else if (i === st._picked) labs[i].classList.add('bad');
+  }
+  var fb = $('fb');
+  fb.hidden = false;
+  fb.className = 'fb ' + (ok ? 'ok' : 'bad');
+  fb.textContent = (ok ? '✔ 答對了！' : '✘ 答錯了。正確答案：' + q.ans) + '　解說：' + q.e;
+  setSecScore(currentSec);
+  updateOverall();
+  $('secScoreText').textContent = '本節答對：' + st.score;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  var N = st.order.length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('checkBtn').hidden = true;
+  if (st.cur < N - 1) $('nextBtn').hidden = false;
+  else $('secDoneBtn').hidden = false;
+}
+
+function nextQuestion() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  if (st.cur < st.order.length - 1) {
+    st.cur++;
+    showQuestion();
+  }
+}
+
+function finishSection() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  st.finished = true;
+  setSecScore(currentSec);
+  updateOverall();
+  showSecResult(currentSec);
+  saveDraft();
+  if (SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    showFinal();
+  }
+}
+
+function showSecResult(secKey) {
+  var st = state[secKey];
+  var N = SECTIONS[secKey].Q.length;
+  $('panel-quiz').hidden = true;
+  $('secResult').hidden = false;
+  $('secResultTitle').textContent = SECTIONS[secKey].title + '・本節完成';
+  $('secFinal').textContent = '得分：' + st.score + ' / ' + N;
+  var p = st.score / N;
+  $('secFinalMsg').textContent = p >= 0.8 ? '表現出色，繼續保持！' : p >= 0.5 ? '不錯，請重溫答錯的題目。' : '請細閱課文及解說，再試一次。';
+  var rv = $('secReview');
+  rv.innerHTML = '';
+  st.order.forEach(function (q, i) {
+    var a = st.answers[i];
+    if (!a) return;
+    var d = document.createElement('div');
+    d.className = 'rv';
+    var t = document.createElement('div');
+    t.className = 't';
+    t.textContent = (i + 1) + '. ' + q.s;
+    var r = document.createElement('div');
+    r.className = a.ok ? 'c' : 'w';
+    r.textContent = (a.ok ? '✔ 你的答案：' : '✘ 你的答案：') + a.pick + (a.ok ? '' : '｜正確答案：' + q.ans);
+    var e = document.createElement('div');
+    e.className = 'muted';
+    e.textContent = '解說：' + q.e;
+    d.appendChild(t); d.appendChild(r); d.appendChild(e);
+    rv.appendChild(d);
+  });
+  var idx = SEC_ORDER.indexOf(secKey);
+  var nextKey = idx < SEC_ORDER.length - 1 ? SEC_ORDER[idx + 1] : null;
+  $('goNextSecBtn').hidden = !nextKey;
+  $('goNextSecBtn').textContent = nextKey ? '前往「' + SECTIONS[nextKey].title + '」' : '';
+  $('goNextSecBtn').onclick = nextKey ? function () {
+    startSection(nextKey, false);
+    $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } : null;
+  $('submitEarlyBtn').hidden = !SEC_ORDER.every(function (k) { return state[k].finished; });
+}
+
+function wrongSummary() {
+  var parts = [];
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var wrong = [];
+    st.answers.forEach(function (a, i) {
+      if (a && !a.ok) wrong.push(i + 1);
+    });
+    if (wrong.length) parts.push(SECTIONS[k].title + '錯題:' + wrong.join(','));
+  });
+  return parts.join('；') || '全對';
+}
+
+function buildPayload(stu) {
+  var sc = state.content.score;
+  var sv = state.vocab.score;
+  var sr = state.rhetorical.score;
+  var total = sc + sv + sr;
+  return {
+    timestamp: new Date().toISOString(),
+    class: stu.class,
+    studentId: stu.studentId,
+    name: stu.name,
+    scoreContent: sc,
+    scoreVocab: sv,
+    scoreRhetorical: sr,
+    scoreTotal: total,
+    maxTotal: MAX_TOTAL,
+    percent: Math.round(total / MAX_TOTAL * 1000) / 10,
+    answersSummary: wrongSummary(),
+    userAgent: navigator.userAgent || ''
+  };
+}
+
+function showFinal() {
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) return;
+  $('finalResult').hidden = false;
+  var total = state.content.score + state.vocab.score + state.rhetorical.score;
+  $('finalScore').textContent = '總分：' + total + ' / ' + MAX_TOTAL;
+  $('finalDetail').innerHTML =
+    '內容理解 ' + state.content.score + '/15　｜　字詞解釋 ' + state.vocab.score +
+    '/15　｜　寫作手法 ' + state.rhetorical.score + '/15<br>正確率 ' +
+    (Math.round(total / MAX_TOTAL * 1000) / 10) + '%';
+  saveDraft();
+}
+
+function saveDraft() {
+  try {
+    var stu = studentInfo();
+    var draft = {
+      student: stu,
+      scores: {
+        content: state.content.score,
+        vocab: state.vocab.score,
+        rhetorical: state.rhetorical.score
+      },
+      finished: SEC_ORDER.map(function (k) { return { k: k, done: state[k].finished, score: state[k].score }; }),
+      summary: wrongSummary(),
+      savedAt: new Date().toISOString()
+    };
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+  } catch (e) {}
+}
+
+function submitToSheet() {
+  var stu = requireStudent();
+  if (!stu) return;
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    alert('請先完成三個部分的全部題目，再交卷。');
+    return;
+  }
+  var payload = buildPayload(stu);
+  saveDraft();
+  var msg = $('submitMsg');
+  msg.hidden = false;
+
+  if (!GAS_WEBAPP_URL) {
+    msg.textContent = '成績已暫存在本機。目前未能上傳至老師試算表，請稍後再試或向老師查詢。';
+    return;
+  }
+  msg.textContent = '正在上傳成績…';
+  $('submitBtn').disabled = true;
+  fetch(GAS_WEBAPP_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  }).then(function () {
+    msg.textContent = '✔ 已送出交卷請求。若老師試算表「交卷紀錄」出現新列，即表示成功。';
+    $('submitBtn').disabled = false;
+  }).catch(function () {
+    msg.textContent = '✘ 上傳失敗，請檢查網絡後再試。本機草稿已保存。';
+    $('submitBtn').disabled = false;
+  });
+}
+
+var yuyiToggle = $('yuyiToggle');
+var yuyiBody = $('yuyiBody');
+if (yuyiToggle && yuyiBody) {
+  yuyiToggle.addEventListener('click', function () {
+    var hide = !yuyiBody.hidden;
+    yuyiBody.hidden = hide;
+    yuyiToggle.setAttribute('aria-expanded', hide ? 'false' : 'true');
+    yuyiToggle.textContent = hide ? '顯示語譯' : '隱藏語譯';
+  });
+}
+
+function renderVideo() {
+  var area = $('videoArea');
+  var link = $('videoTitleLink');
+  var title = '寶寶老師陪你快速溫範文｜《青玉案·元夕》';
+  if (YOUTUBE_ID) {
+    link.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(YOUTUBE_ID);
+    area.innerHTML = '<div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/' +
+      encodeURIComponent(YOUTUBE_ID) + '?rel=0" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>' +
+      '<p class="muted" style="margin-top:10px">若本機開啟（file://）未能播放，請改用上方連結，或發佈後於網頁觀看。</p>';
+  } else {
+    link.href = '#shipin';
+    link.removeAttribute('target');
+    area.innerHTML = '<div class="video-box"><strong>影片即將上線</strong><span>' + title + '</span></div>';
+  }
+}
+
+document.querySelectorAll('.tabs button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    startSection(b.getAttribute('data-sec'), false);
+  });
+});
+$('checkBtn').addEventListener('click', checkAnswer);
+$('nextBtn').addEventListener('click', nextQuestion);
+$('secDoneBtn').addEventListener('click', finishSection);
+$('retrySecBtn').addEventListener('click', function () {
+  startSection(currentSec, true);
+  $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+$('submitBtn').addEventListener('click', submitToSheet);
+$('submitEarlyBtn').addEventListener('click', function () {
+  showFinal();
+  $('finalResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+$('retryAllBtn').addEventListener('click', function () {
+  if (!confirm('確定全部重做？目前得分將重置。')) return;
+  SEC_ORDER.forEach(function (k) {
+    state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+  });
+  $('finalResult').hidden = true;
+  startSection('content', true);
+  updateOverall();
+});
+
+try {
+  var d = localStorage.getItem(DRAFT_KEY);
+  if (d) {
+    var draft = JSON.parse(d);
+    if (draft.student) {
+      if (draft.student.class) $('cls').value = draft.student.class;
+      if (draft.student.studentId) $('sid').value = draft.student.studentId;
+      if (draft.student.name) $('sname').value = draft.student.name;
+    }
+  }
+} catch (e) {}
+
+renderVideo();
+updateOverall();
+startSection('content', false);
+
+
+})();
+</script>
+</body>
+</html>
